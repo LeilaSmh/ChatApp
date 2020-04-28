@@ -1,35 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
-    <link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" >
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-    <title>Simple Chat App</title>
+    <title>ChatApp</title>
   </head>
 
   <body>
-    <header>
-      <h1>Super Chat</h1>
-    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12">
+          <h1 class="text-center">
+            ChatApp
+        </h1>
+        <br>
+        <div class="input-group mb-3">
+          <input id="username" type="text" class="form-control" placeholder="Enter name..."/>
+          <div id="change_username" class="input-group-prepend">
+            <button id="send_username" class="btn btn-outline-secondary" type="button" >Change Username</button>
+          </div>          
+        </div>
 
-    <section>
-      <div id="change_username">
-	<input id="username" type="text" />
-	<button id="send_username" type="button">Change username</button>
+        <div id="chatroom" class="card">
+          <div id="feedback" class="card-block">
+          </div>
+        </div>
+        <br>
+        <div id="input_zone">
+          <textarea id="message" class="form-control" placeholder="Enter message..."></textarea>
+        </div>
+        <br>
+        <div class="text-center">
+          <button id="send_message" class="btn btn-primary btn-lg" type="button">Send</button>
+        </div>
       </div>
-    </section>
-
-    <section id="chatroom">
-      <section id="feedback"></section>
-    </section>
-
-    
-
-    <section id="input_zone"> 
-      <input id="message" class="vertical-align" type="text" />
-      <button id="send_message" class="vertical-align" type="button">Send</button>
-    </section>
+    </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="chat.js"></script>
