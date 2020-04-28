@@ -2,7 +2,7 @@ Chat Application using node.js, socket.io and mongodb
 
 # Run App
 
-1) Download Repo
+1) Download Repository
 
 2) Install node.js
 
@@ -11,4 +11,4 @@ Chat Application using node.js, socket.io and mongodb
 
 # Run NPM START 
 
-and browse https://localhost:port
+and browse https://localhost:3000
